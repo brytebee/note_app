@@ -27,10 +27,8 @@ const addNotes = function (title, body) {
 
 const removeNotes = (title) => {
   const notes = loadNotes();
-  notes.filter(function (note) {
-    note.title !== title;
-  });
-  saveNotes(notes);
+  const filteredNotes = notes.filter((note) => note.title !== title);
+  saveNotes(filteredNotes);
 };
 
 module.exports = { getNotes, addNotes, removeNotes };
