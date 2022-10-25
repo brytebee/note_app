@@ -21,8 +21,16 @@ const saveNotes = (notes) => {
 
 const addNotes = function (title, body) {
   const notes = loadNotes();
-  notes.push({ title, body });
-  saveNotes(notes);
+  const duplicateNotes = notes.filter((note) => {
+    note.title === title;
+  });
+  if (duplicateNotes.length === 0) {
+    notes.push({ title, body });
+    saveNotes(notes);
+    console.log('Note added!');
+  } else {
+    console.log('Note title taken!');
+  }
 };
 
 const normalize = (input) => input.toLowerCase();
