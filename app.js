@@ -1,3 +1,4 @@
+const { argv } = require('yargs');
 const yargs = require('yargs');
 yargs.version('1.1.0');
 
@@ -26,8 +27,8 @@ yargs.command({
 yargs.command({
   command: 'remove',
   describe: 'Remove a note.',
-  handler: () => {
-    console.log('Removing a note...');
+  handler: (argv) => {
+    myNotes.removeNotes(argv.title);
   },
 });
 
