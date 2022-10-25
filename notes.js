@@ -25,4 +25,12 @@ const addNotes = function (title, body) {
   saveNotes(notes);
 };
 
-module.exports = { getNotes, addNotes };
+const removeNotes = (title) => {
+  const notes = loadNotes();
+  notes.filter(function (note) {
+    note.title !== title;
+  });
+  saveNotes(notes);
+};
+
+module.exports = { getNotes, addNotes, removeNotes };
