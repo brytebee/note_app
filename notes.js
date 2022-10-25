@@ -19,6 +19,8 @@ const saveNotes = (notes) => {
   fs.writeFileSync('notes.json', dataJSON);
 };
 
+const normalize = (input) => input.toLowerCase();
+
 const addNotes = function (title, body) {
   const notes = loadNotes();
   const duplicateNotes = notes.filter(
@@ -32,8 +34,6 @@ const addNotes = function (title, body) {
     console.log('Note title taken!');
   }
 };
-
-const normalize = (input) => input.toLowerCase();
 
 const removeNotes = (title) => {
   const notes = loadNotes();
