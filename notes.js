@@ -25,9 +25,13 @@ const addNotes = function (title, body) {
   saveNotes(notes);
 };
 
+const normalize = (input) => input.toLowerCase();
+
 const removeNotes = (title) => {
   const notes = loadNotes();
-  const filteredNotes = notes.filter((note) => note.title !== title);
+  const filteredNotes = notes.filter(
+    (note) => normalize(note.title) !== normalize(title)
+  );
   saveNotes(filteredNotes);
 };
 
