@@ -52,8 +52,12 @@ const removeNotes = (title) => {
 
 const listNotes = () => {
   const notes = loadNotes();
-  console.log(chalk.bold.blue('Your Notes'));
-  notes.forEach((note, i) => console.log(`${i + 1} --- ${note.title}`));
+  if (notes.length) {
+    console.log(chalk.bold.blue('Your Notes'));
+    notes.forEach((note, i) => console.log(`${i + 1} --- ${note.title}`));
+  } else {
+    console.log(chalk.bold.blue('No note yet. Add some notes!'));
+  }
 };
 
 module.exports = { getNotes, addNotes, removeNotes, listNotes };
