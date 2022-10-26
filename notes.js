@@ -4,10 +4,6 @@ const chalk = require('chalk');
 const chalkError = chalk.bold.red;
 const chalkSuccess = chalk.bold.green;
 
-const getNotes = function () {
-  return 'Your notes...';
-};
-
 const loadNotes = () => {
   try {
     const dataBuffer = fs.readFileSync('notes.json');
@@ -71,4 +67,4 @@ const readNote = (title) => {
   }
 };
 
-module.exports = { getNotes, addNotes, removeNotes, listNotes, readNote };
+module.exports = { addNotes, removeNotes, listNotes, readNote };
