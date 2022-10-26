@@ -60,4 +60,15 @@ const listNotes = () => {
   }
 };
 
-module.exports = { getNotes, addNotes, removeNotes, listNotes };
+const readNote = (title) => {
+  const notes = loadNotes();
+  const yourNote = notes.find((note) => note.title === title);
+  if (yourNote) {
+    console.log(chalk.bold.blue(yourNote.title));
+    console.log(chalk.inverse(yourNote.body));
+  } else {
+    console.log(chalkError('Note not found!'));
+  }
+};
+
+module.exports = { getNotes, addNotes, removeNotes, listNotes, readNote };
