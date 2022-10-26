@@ -25,7 +25,7 @@ const saveNotes = (notes) => {
 
 const normalize = (input) => input.toLowerCase();
 
-const addNotes = function (title, body) {
+const addNotes = (title, body) => {
   const notes = loadNotes();
   const duplicateNotes = notes.filter(
     (note) => normalize(note.title) === normalize(title)
