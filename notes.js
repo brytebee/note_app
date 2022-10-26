@@ -27,10 +27,10 @@ const normalize = (input) => input.toLowerCase();
 
 const addNotes = (title, body) => {
   const notes = loadNotes();
-  const duplicateNotes = notes.filter(
+  const duplicateNote = notes.find(
     (note) => normalize(note.title) === normalize(title)
   );
-  if (duplicateNotes.length === 0) {
+  if (!duplicateNote) {
     notes.push({ title, body });
     saveNotes(notes);
     console.log(chalkSuccess('Note added!'));
