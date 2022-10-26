@@ -50,4 +50,10 @@ const removeNotes = (title) => {
   saveNotes(filteredNotes);
 };
 
-module.exports = { getNotes, addNotes, removeNotes };
+const listNotes = () => {
+  const notes = loadNotes();
+  console.log(chalk.bold.blue('Your Notes'));
+  notes.forEach((note, i) => console.log(`${i + 1} --- ${note.title}`));
+};
+
+module.exports = { getNotes, addNotes, removeNotes, listNotes };
