@@ -42,7 +42,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Original design idea by [Andrew Mead](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/#instructor-1) and the The Complete Node.js Developer Course (3rd Edition) development team.
+Original design idea by [Andrew Mead](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/#instructor-1) and [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/) development team.
 
 All thank to _God Almighty_ for life.
 
