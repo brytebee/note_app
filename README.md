@@ -1,6 +1,6 @@
 # NOTE APP [Educational]
 
-For learning and educational purposes only. In this app I begin learning NodeJS by building this cool console note taking app.
+[For learning and educational purposes only.] In this app I began learning NodeJS by building this cool console note taking app.
 
 ## Built With
 
