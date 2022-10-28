@@ -58,7 +58,9 @@ const listNotes = () => {
 
 const readNote = (title) => {
   const notes = loadNotes();
-  const yourNote = notes.find((note) => note.title === title);
+  const yourNote = notes.find(
+    (note) => normalize(note.title) === normalize(title)
+  );
   if (yourNote) {
     console.log(chalk.bold.blue(yourNote.title));
     console.log(chalk.inverse(yourNote.body));
